@@ -1,0 +1,26 @@
+[project]
+name = "datasette-sqlite-trace"
+version = "0.1"
+description = "Datasette plugin that prints all executed SQL to stderr"
+readme = "README.md"
+authors = [{name = "Simon Willison"}]
+license = {text = "Apache-2.0"}
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Framework :: Datasette",
+]
+dependencies = [
+    "datasette"
+]
+
+[project.urls]
+Homepage = "https://github.com/datasette/datasette-sqlite-trace"
+Changelog = "https://github.com/datasette/datasette-sqlite-trace/releases"
+Issues = "https://github.com/datasette/datasette-sqlite-trace/issues"
+CI = "https://github.com/datasette/datasette-sqlite-trace/actions"
+
+[project.entry-points.datasette]
+sqlite_trace = "datasette_sqlite_trace"
+
+[project.optional-dependencies]
+test = ["pytest", "pytest-asyncio"]
